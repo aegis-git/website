@@ -32,7 +32,7 @@
         $query="select * from not_found_table;";
         $res=$link->query($query);
         if($res){
-            //var_dump($res->fetch_all());
+            var_dump($res->fetch_all());
         }
         $link->close();
         return $res;
