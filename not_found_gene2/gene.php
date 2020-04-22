@@ -3,12 +3,25 @@
     function make_html(){
         $src="";
         $src.="<html>";
-        getTextSet();
+        makeRandomComment(getTextSet());
         $src.="<body>hello</body>";
         $src.="</html>";
         return $src;
     }
     echo make_html();
+
+    function makeRandomComment($sql_result){
+        $sql_array=$sql_result->fetch_all();
+        $rm = rand(0,count($sql_array)-1);
+        $t = $sql_array[$rm];
+
+        $mes='<h1>404 '.$t[0].' NOT FOUND</h1>';
+        $mes.='<h2>The requested '.$t[1].' "'.$t[2].'" was not found on '.$t[3].'</h2>';
+        $mes.='<p>お探しの'.$t[4].'は見つかりませんでした</p><br>';
+        $mes.='<p>'.$t[5].'</p><br>';
+        $mes.='<p>'.$t[6].'</p><br>';
+        return $mes;
+    }
 
     function getTextSet(){
         $link =new mysqli('localhost','yuto','Yuto1218','mydb');
@@ -20,8 +33,10 @@
         $query="select * from not_found_table;";
         $res=$link->query($query);
         if($res){
-            var_dump($res->fetch_all());
+            //var_dump($res->fetch_all());
         }
         $link->close();
+        return $res;
     }
+
 ?>
