@@ -17,7 +17,7 @@
         }else{
             //success
             $table_all=mysqli_query($link, 'select *.* from not_found_table;');
-            echo $table_all;
+            echo $table_all."bry";
         }
     }
 ?>
