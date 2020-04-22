@@ -15,7 +15,9 @@
         if(mysqli_connect_errno()){
             die("データベースに接続できません:" . mysqli_connect_error() . "\n");
         }else{
-            echo "データベースの接続に成功しました。\n";
+            //success
+            $table_all=mysqli_query($link, 'select *.* from not_found_table;');
+            echo $table_all;
         }
     }
 ?>
