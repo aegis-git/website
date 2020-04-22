@@ -17,7 +17,7 @@
         $mes='<h1>404 '.$t[0].' NOT FOUND</h1>';
         $mes.='<h2>The requested '.$t[1].' "'.$t[2].'" was not found on '.$t[3].'</h2>';
         $mes.='<p>お探しの'.$t[4].'は見つかりませんでした<br>';
-        $mes.=''.$t[5].'';
+        $mes.=''.$t[5].'<br>';
         $mes.=''.$t[6].'</p>';
         return $mes;
     }
