@@ -2,10 +2,9 @@
     
     function make_html(){
         $src="";
-        $src.="<html>";
+        $src.="<html><body>";
         makeRandomComment(getTextSet());
-        $src.="<body>hello</body>";
-        $src.="</html>";
+        $src.="</body></html>";
         return $src;
     }
     echo make_html();
