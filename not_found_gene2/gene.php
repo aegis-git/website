@@ -14,9 +14,9 @@
         $link =mysqli_connect('localhost','yuto','Yuto1218','mydb');
         $query="select * from not_found_table;";
         if(mysqli_query($link,$query)){
-            echo "good";
+            echo mysqli_query($link,$query);
         }else{
-            echo mysqli_query($link,$query)." is q";
+
         }
     }
 ?>
