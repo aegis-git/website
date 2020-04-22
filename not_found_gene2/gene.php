@@ -1,13 +1,14 @@
 <?php
-    echo make_html();
-
+    
     function make_html(){
         $src="";
         $src.="<html>";
         getTextSet();
+        $src.="<body>hello</body>";
         $src.="</html>";
         return $src;
     }
+    echo make_html();
 
     function getTextSet(){
         $link =mysqli_connect('localhost','yuto','Yuto1218','mydb');
