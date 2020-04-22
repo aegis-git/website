@@ -15,7 +15,7 @@
         $t = $sql_array[$rm];
 
         var_dump($t);
-        var_dump($sql_array);
+        var_dump($sql_array[0]);
 
         $mes='<h1>404 '.$t[0].' NOT FOUND</h1>';
         $mes.='<h2>The requested '.$t[1].' "'.$t[2].'" was not found on '.$t[3].'</h2>';
