@@ -3,7 +3,7 @@
     function make_html(){
         $src="";
         $src.="<html><body>";
-        makeRandomComment(getTextSet());
+        $src.=makeRandomComment(getTextSet());
         $src.="</body></html>";
         return $src;
     }
