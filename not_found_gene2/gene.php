@@ -12,12 +12,11 @@
 
     function getTextSet(){
         $link =mysqli_connect('localhost','yuto','Yuto1218','mydb');
-        if(mysqli_connect_errno()){
-            die("データベースに接続できません:" . mysqli_connect_error() . "\n");
+        $query="select *.* from not_found_table;";
+        if(mysqli_query($link,$query)){
+            echo "good";
         }else{
-            //success
-            $table_all=mysqli_query($link, 'select *.* from not_found_table;');
-            echo $table_all."bry";
+            echo mysqli_query($link,$query);
         }
     }
 ?>
