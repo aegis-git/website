@@ -4,7 +4,7 @@
     function make_html(){
         $src="";
         $src.="<html>";
-
+        getTextSet();
         $src.="</html>";
         return $src;
     }
